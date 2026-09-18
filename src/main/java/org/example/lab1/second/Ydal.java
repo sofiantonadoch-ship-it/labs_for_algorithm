@@ -5,7 +5,7 @@ public class Ydal {
     {
         if (arr == null)
         {
-            throw new IllegalArgumentException("нет последовательности для проверки");
+            throw new IllegalArgumentException("нет последовательности для проверки!");
         }
         if (arr.length == 0 || arr.length > 100)
         {
