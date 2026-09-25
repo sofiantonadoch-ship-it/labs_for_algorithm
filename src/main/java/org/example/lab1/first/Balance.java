@@ -1,5 +1,4 @@
 package org.example.lab1.first;
-
 import java.util.ArrayDeque;
 import java.util.Deque;
 public class Balance
