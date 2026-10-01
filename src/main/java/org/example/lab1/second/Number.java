@@ -1,5 +1,5 @@
 package org.example.lab1.second;
-public class Ydal {
+public class Number {
     public int removeElementInPlace(int[] arr, int val)
     {
         if (arr == null)
