@@ -17,12 +17,12 @@ public class RadixSort implements Sorting<BigInteger>
 
             for (BigInteger x : arr) {
                 if (x == null) {
-                    throw new IllegalArgumentException("List contains null");
+                    throw new IllegalArgumentException("список не должен сожержать 0");
                 }
 
                 if (x.signum() < 0) {
                     throw new IllegalArgumentException(
-                            "RadixSort supports only non-negative BigInteger values"
+                            "можно ввести тоько положительные числа"
                     );
                 }
 

@@ -15,7 +15,7 @@ import java.util.List;
             int n = Integer.parseInt(firstLine.trim());
 
             if (n < 1 || n > 100000) {
-                throw new IllegalArgumentException("N must be in range 1..100000");
+                throw new IllegalArgumentException("число может быть от 1 до 100000");
             }
 
             List<Student> students = new ArrayList<>(n);

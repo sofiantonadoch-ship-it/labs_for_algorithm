@@ -29,7 +29,6 @@ import java.util.Scanner;
 
             Sorting<Integer> sorter = new InsertionSort();
             sorter.sort(nums);
-
             StringBuilder out = new StringBuilder();
 
             for (int i = 0; i < nums.size(); i++) {
