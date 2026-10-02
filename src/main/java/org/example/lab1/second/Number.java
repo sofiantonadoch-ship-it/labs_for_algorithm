@@ -4,7 +4,7 @@ public class Number {
     {
         if (arr == null)
         {
-            throw new IllegalArgumentException("нет последовательности для проверки!");
+            throw new IllegalArgumentException("0 не может быть в последовательности для проверки!");
         }
         if (arr.length == 0 || arr.length > 100)
         {
