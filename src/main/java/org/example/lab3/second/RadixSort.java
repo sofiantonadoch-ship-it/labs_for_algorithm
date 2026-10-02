@@ -22,7 +22,7 @@ public class RadixSort implements Sorting<BigInteger>
 
                 if (x.signum() < 0) {
                     throw new IllegalArgumentException(
-                            "можно ввести тоько положительные числа"
+                            "можно ввести только положительные числа"
                     );
                 }
 
