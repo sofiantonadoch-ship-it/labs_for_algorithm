@@ -1,10 +1,10 @@
 package org.example.lab1.second;
-public class Number {
+public class ArrayProcessor {
     public int removeElementInPlace(int[] arr, int val)
     {
         if (arr == null)
         {
-            throw new IllegalArgumentException("0 не может быть в последовательности для проверки!");
+            throw new IllegalArgumentException("Массив не может быть null");
         }
         if (arr.length == 0 || arr.length > 100)
         {
