@@ -18,7 +18,7 @@ import java.util.Scanner;
             for (int i = 0; i < n; i++) {
                 int x = sc.nextInt();
 
-                if (Math.abs((long) x) > 1_000_000_000L) {
+                if (x < -1_000_000_000 || x > 1_000_000_000) {
                     throw new IllegalArgumentException(
                             "Элемент по модулю не должен превосходить 10^9"
                     );
@@ -27,8 +27,7 @@ import java.util.Scanner;
                 nums.add(x);
             }
 
-            Sorting<Integer> sorter = new InsertionSort();
-            sorter.sort(nums);
+            nums.sort(Integer::compareTo);
             StringBuilder out = new StringBuilder();
 
             for (int i = 0; i < nums.size(); i++) {

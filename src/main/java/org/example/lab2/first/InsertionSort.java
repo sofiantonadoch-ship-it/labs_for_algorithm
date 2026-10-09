@@ -4,9 +4,9 @@ import java.util.List;
         @Override
         public void sort(List<Integer> nums) {
             for (int i = 1; i < nums.size(); i++) {
-                Integer N = nums.get(i);
+                int N = nums.get(i);
                 int j = i - 1;
-                while (j >= 0 && nums.get(j).compareTo(N) > 0) {
+                while (j >= 0 && nums.get(j) >N) {
                     nums.set(j + 1, nums.get(j));
                     j--;
                 }
