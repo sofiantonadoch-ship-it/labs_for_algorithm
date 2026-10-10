@@ -5,8 +5,7 @@ import java.util.Scanner;
 interface Sorting<T> {
     void sort(List<T> nums);
 }
-public class Merge_sort {
-    public static class MergeSort implements Sorting<Integer> {
+    public class MergeSort implements Sorting<Integer> {
 
         private void slice(List<Integer> nums, int start, int end) {
             if (start >= end) {
@@ -108,4 +107,3 @@ public class Merge_sort {
             System.out.println(sb);
         }
     }
-}
