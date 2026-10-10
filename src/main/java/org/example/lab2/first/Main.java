@@ -27,7 +27,7 @@ import java.util.Scanner;
                 nums.add(x);
             }
 
-            nums.sort(Integer::compareTo);
+            new InsertionSort().sort(nums);
             StringBuilder out = new StringBuilder();
 
             for (int i = 0; i < nums.size(); i++) {
