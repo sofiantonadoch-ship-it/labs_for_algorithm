@@ -1,26 +1,32 @@
 package org.example.lab3.third;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.UUID;
 
 public class UUIDExample {
     public static void main(String[] args) {
-        List<UUID> ids = Arrays.asList(
-                UUID.fromString(
-                        "ffffffff-ffff-ffff-ffff-ffffffffffff"
-                ),
-                UUID.fromString(
-                        "00000000-0000-0000-0000-000000000001"
-                ),
-                UUID.fromString(
-                        "12345678-1234-1234-1234-123456789abc"
-                )
-        );
+        Scanner scanner = new Scanner(System.in);
+        List<UUID> ids = new ArrayList<>();
+
+        System.out.println("Введите количество UUID:");
+        int n = Integer.parseInt(scanner.nextLine());
+
+        System.out.println("Введите UUID (каждый с новой строки):");
+
+        for (int i = 0; i < n; i++) {
+            String input = scanner.nextLine();
+            ids.add(UUID.fromString(input));
+        }
 
         Sorting<UUID> sorting = new MergeSort<>();
         sorting.sort(ids);
 
+        System.out.println("Отсортированные UUID:");
+
         ids.forEach(System.out::println);
+
+        scanner.close();
     }
 }
