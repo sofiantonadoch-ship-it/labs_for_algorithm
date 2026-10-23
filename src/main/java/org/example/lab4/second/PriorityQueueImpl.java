@@ -1,10 +1,8 @@
 package org.example.lab4.second;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class PriorityQueueImpl implements PriorityQueue<Integer> {
 
     private static class Node {

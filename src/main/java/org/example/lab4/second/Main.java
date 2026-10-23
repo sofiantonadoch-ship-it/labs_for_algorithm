@@ -1,7 +1,6 @@
 package org.example.lab4.second;
 import java.util.Scanner;
 public class Main {
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         PriorityQueueImpl queue = new PriorityQueueImpl();

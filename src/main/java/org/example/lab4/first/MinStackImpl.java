@@ -1,6 +1,5 @@
 package org.example.lab4.first;
 public class MinStackImpl implements MinStack<Integer> {
-
     private static class Node {
         int value;
         int min;
