@@ -70,7 +70,6 @@ public class PriorityQueueImpl implements PriorityQueue<Integer> {
 
         Integer index = positions.get(operation);
 
-        // Элемент уже извлечён или такой вставки нет.
         if (index == null) {
             return;
         }
@@ -78,7 +77,6 @@ public class PriorityQueueImpl implements PriorityQueue<Integer> {
         Node node = heap.get(index);
         node.value += addition;
 
-        // Если значение увеличилось, элемент поднимается вверх.
         siftUp(index);
     }
 
