@@ -19,7 +19,7 @@ public class HashMapImpl<V> implements HashMap<String, V> {
     public HashMapImpl() {
         table = new ArrayList<>(TABLE_SIZE);
 
-        // Создаём пустые списки для каждой ячейки
+
         for (int i = 0; i < TABLE_SIZE; i++) {
             table.add(new LinkedList<>());
         }
@@ -40,16 +40,13 @@ public class HashMapImpl<V> implements HashMap<String, V> {
 
         LinkedList<Entry<V>> list = table.get(index);
 
-        // Проверяем, существует ли ключ
+
         for (Entry<V> entry : list) {
             if (entry.key.equals(key)) {
-                // Если существует, обновляем значение
                 entry.value = value;
                 return;
             }
         }
-
-        // Если ключа нет, добавляем новую пару
         list.add(new Entry<>(key, value));
     }
     @Override
