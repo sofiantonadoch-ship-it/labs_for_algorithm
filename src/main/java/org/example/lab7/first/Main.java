@@ -11,44 +11,45 @@ public class Main {
         boolean running = true;
         System.out.println("=== РОГАЛИК ===");
         while (running) {
+
             System.out.println("\n=== ГЛАВНОЕ МЕНЮ ===");
             System.out.println("1. Начать игру");
             System.out.println("2. Сгенерировать новую карту");
             System.out.println("3. Выйти из игры");
             System.out.print("Выберите действие: ");
+
+            if (!scanner.hasNextLine()) {
+                System.out.println("\nВвод недоступен. Завершение программы.");
+                break;
+            }
+
             String choice = scanner.nextLine().trim();
+
             switch (choice) {
+
                 case "1":
-                    if (!Files.exists(Paths.get(INPUT_FILE))) {
-                        System.out.println(
-                                "Карта не найдена. Сначала создайте новую карту."
-                        );
-                        break;
-                    }
                     startGame();
                     break;
+
                 case "2":
                     try {
                         MapGenerator.generate(INPUT_FILE);
                         startGame();
                     } catch (IOException | IllegalArgumentException e) {
-                        System.out.println(
-                                "Ошибка: " + e.getMessage()
-                        );
+                        System.out.println("Ошибка: " + e.getMessage());
                     }
                     break;
-                case "3":
 
+                case "3":
                     System.out.println("Спасибо за игру!");
                     running = false;
-
                     break;
+
                 default:
-                    System.out.println(
-                            "Неверный выбор. Введите число от 1 до 3."
-                    );
+                    System.out.println("Неверный выбор. Введите число от 1 до 3.");
             }
         }
+
         scanner.close();
     }
     private static void startGame() {
